@@ -1,0 +1,14 @@
+﻿
+
+创建tomcat+jdk8环境container
+
+
+进入tomcatDocker目录：
+1、执行  docker build –t linx/tomcat .   命令创建镜像
+
+
+执行   docker run –i –t –p 18080:8080 linx/tomcat 
+启动tomcat   ./usr/local/apache-tomcat-8.0.20/bin/startup.sh 
+
+
+使用-v进行共享宿主机目录启动：   docker run –i –t –p 18080:8080 –v /usr/local/dockerData:/usr/local/docker linx/tomcat
